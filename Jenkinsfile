@@ -11,10 +11,14 @@ pipeline {
             }
         }
         stage('Sanity check') {
-            input "Does the build look okay?"   
+            steps {
+                input "Does the build look okay?"   
+            }
         }
         stage('Deploy to production') {
-            echo 'Deploying'
+            steps {
+                echo 'Deploying'
+            }
         }
     }
 }
