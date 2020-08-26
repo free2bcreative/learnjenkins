@@ -10,5 +10,11 @@ pipeline {
                 sh 'mvn --version'
             }
         }
+        stage('Sanity check') {
+            input "Does the build look okay?"   
+        }
+        stage('Deploy to production') {
+            echo 'Deploying'
+        }
     }
 }
